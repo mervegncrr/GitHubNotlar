@@ -1,1 +1,71 @@
 Git Dersi Notları 
+
+Git Nedir?
+Versiyon Kontrol Sistemi 
+
+cd change directory 
+
+ls: klasör içerisindeki tüm dosyaları gösterir
+
+cd Desktop : Desktop dosyasının içine girer.
+
+cd .. girdiği dosyadan geri çıkar 
+
+mkdir: make direktory bulunduğu konuma yeni dosya açar. 
+
+touch not.txt: metin dosyası açtım 
+
+rm: remove dosya kaldırmak için kullanıyorum
+
+rm -rf: klasör kaldırmak için kullanıyorum.
+
+git config --global user.name "Merve Gencer"
+
+Repository: genel proje 
+
+git status: güncel git durumunu gösterir.
+
+git init: initiliaze etmeye başlıyor
+
+untracted files: git bunu takip etmiyor. Her dosyayıda takip etmek zorunda değil yer kaplamasına gerek yoksa örneğin dış kütüphane
+
+branch: bir yerde bir özelliği eklerken bir yerde tamamen farklı bir özelliği ekleyip sonradan birleştirebiliriz ya da başkalarıyla aynı an da çalışabiliriz vs.
+
+master: bir branch genelde ana branchtir. Son hali 
+
+HEAD: git içerisinde nerede hangi konumda olduğumuzu gösteriyor. Genelde son commiti gösteriyor. Güncel konum!
+HEAD --> master: master branchinde son committeyim.  
+
+git branch: brancleri görmemi sağlar.
+
+git branch feature: feature adında bir branch olusturdum.
+
+git switch feature: head branch inden feature branchine geçtim.
+                         
+Yarım kalmış bir şeyi commit etmeyiz. Gerçekten save pointse commit ederiz.
+stash: bunları al sakla bir yerde ben sonra istersem kullanırım. Stash diye bir yer var ve git bunları saklıyor.
+
+git stash pop: stashtekini direkt kullanıyorum ve stashten siliniyor.
+
+git stash apply: stashtekini kullanıyorum ama stashte kalsın istiyorsam bunu kullanıyorum.
+
+git stash list: var olan stashleri görüntülüyor.
+
+git stash apply ....: .... yerine listedeki stashlerden birinin adını kopyalıyorum ve o stashi kullanıyorum.
+
+git checkout [commitin idsini kopyala]: commit yaptım ve aynı branch içinde geri dönmek istediğim ve değiştirmek isteediğim yerler var. Checkout yaptıktan sonra istersem yeni branch oluşturabilir istersem değişiklik yaparak aynı branch üzerinden ilerleyebilirim. 
+
+git reset: içeriği sizin silmenize fırsat vererek commiti siler.
+
+git reset --hard: direk commiti siler.
+
+git revert: commiti siler ama log daki tarihi değiştirmez, ortadan kaldırmaz.
+
+git diff: belli başlı branchler olabilir doyaalar olabilir farklılıklarrı gösteriyor.
+git add . yaparsam git diff i göstermiyor
+
+git diff HEAD çalıştırabiliriz ve oradaki değişiklikleri de görebilirim. 
+
+iki commit arasındaki farka da bakabilirim: git diff [commit mashi] [diğer commit mashi]
+
+git diff master feat: master ve feat arasındaki farkı görüyorum. (iki branch) aradaki boşluk sıkıntı olursa boşluk yerine .. kullanılır.
